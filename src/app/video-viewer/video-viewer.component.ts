@@ -15,7 +15,7 @@ export class VideoViewerComponent implements OnInit {
 
   constructor(private embedService: EmbedVideoService) {
     this.yt_iframe_html = this.embedService.embed(this.youtubeUrl, {
-      attr: { width: 600, height: 600 }
+      attr: { width: 600 , height: 600 }
     });
   }
 

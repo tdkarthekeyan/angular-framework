@@ -16,6 +16,8 @@ import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
 import { AgmDirectionModule } from 'agm-direction';
 import { EmbedVideo } from 'ngx-embed-video';
 import { VideoViewerComponent } from './video-viewer/video-viewer.component';
+import { WebViewerComponent } from './web-viewer/web-viewer.component';
+import { PdfViewerComponent } from './pdf-viewer/pdf-viewer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { VideoViewerComponent } from './video-viewer/video-viewer.component';
     DataTableComponent,
     AddUserComponent,
     MapsComponent,
-    VideoViewerComponent
+    VideoViewerComponent,
+    WebViewerComponent,
+    PdfViewerComponent
   ],
   imports: [
     BrowserModule,
@@ -41,14 +45,16 @@ import { VideoViewerComponent } from './video-viewer/video-viewer.component';
       { path: 'data-table', component: DataTableComponent },
       { path: 'add-user', component: AddUserComponent },
       { path: 'maps', component: MapsComponent },
-      { path: 'video-viewer', component: VideoViewerComponent }
+      { path: 'video-viewer', component: VideoViewerComponent },
+      { path: 'web-viewer', component: WebViewerComponent },
+      { path: 'pdf-viewer', component: PdfViewerComponent }
     ]),
     AgmDirectionModule,
     AgmCoreModule.forRoot({
       // apiKey: 'AIzaSyD513TlwlLW0lxtHCQ_yGpwYqryOKcWDGc'
       apiKey: 'AIzaSyDFTKbcSXEN22pUx3zfaabEOGyy7oOZtmI'
     }),
-    EmbedVideo.forRoot()
+    EmbedVideo.forRoot(),
   ],
   providers: [GoogleMapsAPIWrapper],
   bootstrap: [AppComponent]

@@ -63,7 +63,27 @@
         *ngIf="isLoggedIn()"
       >
         <mat-icon mat-list-icon>play_circle_outline</mat-icon>
-        <span class="title" mat-line>Viedo Viewer</span>
+        <span class="title" mat-line>Video Viewer</span>
+      </a>
+      <a
+        mat-list-item
+        class="sidenav-link"
+        [routerLink]="['/web-viewer']"
+        (click)="sidenav.toggle()"
+        *ngIf="isLoggedIn()"
+      >
+        <mat-icon mat-list-icon>web</mat-icon>
+        <span class="title" mat-line>Web Viewer</span>
+      </a>
+      <a
+        mat-list-item
+        class="sidenav-link"
+        [routerLink]="['/pdf-viewer']"
+        (click)="sidenav.toggle()"
+        *ngIf="isLoggedIn()"
+      >
+        <mat-icon mat-list-icon>description</mat-icon>
+        <span class="title" mat-line>PDF Viewer</span>
       </a>
     </mat-nav-list>
   </mat-sidenav>

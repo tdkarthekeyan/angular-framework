@@ -24,7 +24,17 @@
     </a>
   </mat-grid-tile>
   <mat-grid-tile>Image Viewer</mat-grid-tile>
-  <mat-grid-tile>Video Viewer</mat-grid-tile>
-  <mat-grid-tile>PDF Viewer</mat-grid-tile>
+  <mat-grid-tile>
+    <a class="sidenav-link" [routerLink]="['/web-viewer']">
+      <mat-icon mat-list-icon>web</mat-icon>
+      <span>Web Viewer</span>
+    </a>
+  </mat-grid-tile> 
+  <mat-grid-tile>
+    <a class="sidenav-link" [routerLink]="['/pdf-viewer']">
+      <mat-icon mat-list-icon>description</mat-icon>
+      <span>PDF Viewer</span>
+    </a>
+  </mat-grid-tile> 
   <mat-grid-tile>Chat Box</mat-grid-tile>
 </mat-grid-list>
